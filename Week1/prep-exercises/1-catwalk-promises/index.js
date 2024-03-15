@@ -45,7 +45,7 @@ function catWalk() {
   const centerPos = (window.innerWidth - img.width) / 2;
   const stopPos = window.innerWidth;
 
-  walk(img, startPos, centerPos).then(()=>dance(img)).then(()=>walk(img,centerPos,stopPos)).then(catWalk);
+  walk(img, startPos, centerPos).then(()=>dance(img)).then(()=>walk(img,centerPos,stopPos)).then(catWalk).catch(() => { console.log(Error); });
 
   // Use the `walk()` and `dance()` functions to let the cat do the following:
   // 1. Walk from `startPos` to `centerPos`.
